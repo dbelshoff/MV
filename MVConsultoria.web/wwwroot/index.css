@@ -49,7 +49,7 @@ body{
 }
 
 .container button{
-    background-color: #567EF5;
+    
     color: #2c2c2c;
     font-size: 12px;
     padding: 10px 45px;
@@ -74,8 +74,13 @@ body{
     height: 100%;
 }
 
+.whatsapp-container{
+    text-align: center;
+    width: 250px;
+}
+
 .button-login{
-    background-color: #19cc5b;
+    background-color: #567EF5;
 }
 
 

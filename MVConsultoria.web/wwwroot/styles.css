@@ -74,6 +74,7 @@ body {
     transition: margin-left 0.3s ease;
     height: 100%;
     overflow: hidden; 
+    align-items: center;
 }
 
 
@@ -86,6 +87,7 @@ body {
     font-size: 18px;
     color: #43b043;
     height: auto;
+
 }
 
 
