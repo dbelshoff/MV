@@ -2,7 +2,6 @@ using System.ComponentModel.DataAnnotations;
 
 namespace MVConsultoria.Web.Models
 {
-
     public class User
     {
         public int Id { get; set; }
@@ -17,16 +16,17 @@ namespace MVConsultoria.Web.Models
         [Required(ErrorMessage = "O e-mail é obrigatório.")]
         public string Email { get; set; } = string.Empty;
 
-
-        [Required(ErrorMessage = "O senha é obrigatório.")]
+        [Required(ErrorMessage = "A senha é obrigatória.")]
         public string Senha { get; set; } = string.Empty;
 
         // Propriedade para bloquear o usuário
         public bool UserBloqueado { get; set; } = false;
+
+        // Mapeamento do campo Discriminator
+        public string Discriminator { get; set; } = string.Empty;
     }
-
-
 }
+
 
 
 

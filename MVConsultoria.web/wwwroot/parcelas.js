@@ -359,6 +359,8 @@ async function pagarParcela(idParcela, valorPago) {
     }
 }
 
+const logoutLink = document.getElementById('logoutLink');
+
 // Evento para exibir o modal ao clicar em "Baixar Parcelas Selecionadas"
 document.getElementById('baixarParcelasSelecionadas').addEventListener('click', function() {
     exibirModalBaixaParcelas();  // Exibe o modal com as parcelas selecionadas
@@ -378,12 +380,25 @@ document.addEventListener("DOMContentLoaded", function () {
         sidebar.classList.toggle("hidden");
     });
 
-    // Função de logout
-    document.getElementById('logoutLink').addEventListener('click', function(event) {
-        event.preventDefault();
-        logout();
-    });
+    if (logoutLink) {
+        logoutLink.addEventListener('click', function (event) {
+            event.preventDefault();
+            logout();
+        });
+    }
 });
+
+
+
+
+
+function logout() {
+console.log('Tentando fazer logout...');
+localStorage.removeItem('token');
+console.log('Token após remoção:', localStorage.getItem('token'));
+window.location.href = "index.html";
+}
+
 
 
 

@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     verificarAutenticacao();
 });
 
- function verificarAutenticacao() {
+function verificarAutenticacao() {
     const token = localStorage.getItem('token');
     if (!token) {
         window.location.href = "index.html"; // Redireciona para a página de login

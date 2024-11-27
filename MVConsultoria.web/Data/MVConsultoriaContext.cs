@@ -32,6 +32,15 @@ namespace MVConsultoria.Web.Data
                 .HasForeignKey(p => p.CompraId)
                 .OnDelete(DeleteBehavior.Cascade);
 
+
+            modelBuilder.Entity<User>()
+                .HasDiscriminator<string>("Discriminator") // Define o campo
+                .HasValue<Administrador>("Administrador")  // Mapeia os valores para os tipos
+                .HasValue<User>("Usuario")
+                .HasValue<Cliente>("Cliente");
+
+
+
         }
     }
 }

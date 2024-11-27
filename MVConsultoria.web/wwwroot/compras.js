@@ -406,6 +406,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const closeEditCompraButton = document.querySelector('.close-edit-compra');
     const alterarCompraButton = document.getElementById('alterarCompra');
     const novoCompraButton = document.getElementById('novaCompra');
+    const logoutLink = document.getElementById('logoutLink');
 
     // Fechar o modal de cadastro ao clicar no "X" ou no botão "Cancelar"
     if (closeCreateCompraButton) {
@@ -435,7 +436,27 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     carregarClientes(); // Carrega a lista de clientes no modal de cadastro de compra
+
+
+    if (logoutLink) {
+        logoutLink.addEventListener('click', function (event) {
+            event.preventDefault();
+            logout();
+        });
+    }
 });
+
+
+
+
+
+function logout() {
+    console.log('Tentando fazer logout...');
+    localStorage.removeItem('token');
+    console.log('Token após remoção:', localStorage.getItem('token'));
+    window.location.href = "index.html";
+}
+
 
 
 

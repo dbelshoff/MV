@@ -73,6 +73,10 @@
       "PackagePath": "staticwebassets\\parcelas.js"
     },
     {
+      "Id": "C:\\Users\\Belshoff\\projects\\aulaspoo2\\mvconsultoria.web\\wwwroot\\spa-old.js",
+      "PackagePath": "staticwebassets\\spa-old.js"
+    },
+    {
       "Id": "C:\\Users\\Belshoff\\projects\\aulaspoo2\\mvconsultoria.web\\wwwroot\\spa.css",
       "PackagePath": "staticwebassets\\spa.css"
     },
@@ -87,6 +91,14 @@
     {
       "Id": "C:\\Users\\Belshoff\\projects\\aulaspoo2\\mvconsultoria.web\\wwwroot\\styles.css",
       "PackagePath": "staticwebassets\\styles.css"
+    },
+    {
+      "Id": "C:\\Users\\Belshoff\\projects\\aulaspoo2\\mvconsultoria.web\\wwwroot\\usuarios.html",
+      "PackagePath": "staticwebassets\\usuarios.html"
+    },
+    {
+      "Id": "C:\\Users\\Belshoff\\projects\\aulaspoo2\\mvconsultoria.web\\wwwroot\\usuarios.js",
+      "PackagePath": "staticwebassets\\usuarios.js"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.MVConsultoria.Web.Microsoft.AspNetCore.StaticWebAssets.props",

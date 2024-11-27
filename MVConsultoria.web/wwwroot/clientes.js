@@ -327,6 +327,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const closeEditButton = document.querySelector('.close');
     const alterarClienteButton = document.getElementById('alterarCliente');
     const novoClienteButton = document.getElementById('novoCliente');
+    const logoutLink = document.getElementById('logoutLink');
 
     // Fechar o modal de cadastro ao clicar no "X" ou no botão "Cancelar"
     if (closeCreateButton) {
@@ -354,7 +355,27 @@ document.addEventListener('DOMContentLoaded', function () {
     if (novoClienteButton) {
         novoClienteButton.addEventListener('click', mostrarModalCadastro);
     }
+
+    if (logoutLink) {
+        logoutLink.addEventListener('click', function (event) {
+            event.preventDefault();
+            logout();
+        });
+    }
 });
+
+
+
+
+
+function logout() {
+    console.log('Tentando fazer logout...');
+    localStorage.removeItem('token');
+    console.log('Token após remoção:', localStorage.getItem('token'));
+    window.location.href = "index.html";
+}
+
+
 
 
 

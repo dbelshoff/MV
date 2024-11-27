@@ -24,7 +24,7 @@ namespace MVConsultoria.Web.Controllers
         }
 
         // GET: api/Users
-        [HttpGet]
+        /*[HttpGet]
         public async Task<ActionResult<IEnumerable<User>>> GetUsers()
         {
             return await _context.Users.ToListAsync();
@@ -42,7 +42,48 @@ namespace MVConsultoria.Web.Controllers
             }
 
             return user;
+        }*/
+
+        /*[HttpGet]
+        public async Task<ActionResult<IEnumerable<UserDto>>> GetFilteredUsers()
+        {
+            var users = await _context.Users
+                .Where(u => u is Administrador || u is User) // Filtra pelo tipo derivado
+                .Select(u => new UserDto
+                {
+                    Id = u.Id,
+                    Nome = u.Nome,
+                    CPF = u.CPF,
+                    Email = u.Email,
+                    Tipo = u is Administrador ? "Administrador" : "Usuario",
+                    Bloqueado = u.UserBloqueado
+                })
+                .ToListAsync();
+
+            return Ok(users);
+        }*/
+
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<UserDto>>> GetFilteredUsers()
+        {
+            var users = await _context.Users
+                .Where(u => u.Discriminator == "Administrador" || u.Discriminator == "Usuario") // Filtra os tipos desejados
+                .Select(u => new UserDto
+                {
+                    Id = u.Id,
+                    Nome = u.Nome,
+                    CPF = u.CPF,
+                    Email = u.Email,
+                    Tipo = u.Discriminator, // Reflete diretamente o campo do banco
+                    Bloqueado = u.UserBloqueado
+                })
+                .ToListAsync();
+
+            return Ok(users);
         }
+
+
+
 
         // POST: api/Users
         [HttpPost]
