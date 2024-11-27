@@ -405,6 +405,5 @@ window.location.href = "index.html";
 
 
 
-
 // Chama a função ao carregar a página
 window.onload = carregarParcelas;
