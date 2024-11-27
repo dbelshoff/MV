@@ -74,6 +74,7 @@ body {
     transition: margin-left 0.3s ease;
     height: 100%;
     overflow: hidden; 
+    align-items: center;
 }
 
 
@@ -86,6 +87,7 @@ body {
     font-size: 18px;
     color: #43b043;
     height: auto;
+
 }
 
 
@@ -227,29 +229,24 @@ th, td {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.4);
     padding-top: 60px;
-    overflow-y:auto;
-    
 }
 
 .modal-content {
-    background: rgba(52, 52, 52, 0.9); /* Fundo semi-transparente para efeito elegante */
+    background-color: #343434;
     color: #f8f8f8;
     margin: 5% auto;
     padding: 20px;
-    border-radius: 12px;
-    width: 20%;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra suave para profundidade */
-    border: 1px solid rgba(255, 255, 255, 0.3); /* Borda translúcida */
-    backdrop-filter: blur(10px); /* Efeito de desfoque no fundo do modal */
-    -webkit-backdrop-filter: blur(10px); /* Compatibilidade com Safari */
+    border: 1px solid #888;
+    width: 50%;
+    border-radius: 10px;
 }
 
 .close, .close-create {
-    color: #f8f8f8;
+    color: #aaa;
     float: right;
-    font-size: 24px;
+    font-size: 28px;
     font-weight: bold;
     cursor: pointer;
 }
@@ -258,33 +255,6 @@ th, td {
 .close-create:hover, .close-create:focus {
     color: black;
 }
-
-input[type="text"],
-input[type="email"],
-input[type="password"],
-input[type="date"],
-input[type="number"] {
-    border-width: 1px;
-    border-color: rgba(128, 128, 128, 0.5);
-    padding: 10px;
-    margin: 10px 0;
-    width: 100%;
-    border-radius: 5px;
-    background-color: #fff;
-    box-sizing: border-box; /* Garante que padding não altere a largura total */
-    border-style: solid;
-    outline: none;
-}
-
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="password"]:focus,
-input[type="date"]:focus,
-input[type="number"]:focus {
-    border-color: rgba(128, 128, 128, 0.8); /* Borda mais evidente ao focar */
-    box-shadow: 0 0 5px rgba(128, 128, 128, 0.3); /* Leve sombra ao focar */
-}
-
 
 /* Button Styles */
 button {
@@ -302,34 +272,40 @@ button:hover {
 }
 
 button.cancel {
-    background-color: #f44336;
+    background-color: #567EF5;
+    color: white;
 }
 
 button.cancel:hover {
-    background-color: #d32f2f;
+    background-color: #567EF5;
+    color: white;
 }
 
 #saveNewCompraBtn, #saveEditCompraBtn {
-    background-color: #4caf50;
+    background-color: #567EF5;
+    color: white;
     margin-right: 10px;
 }
 
 #saveNewCompraBtn:hover, #saveEditCompraBtn:hover {
-    background-color: #45a049;
+    background-color: #567EF5;
+    color: white;
 }
 
 #cancelNewCompraBtn, #cancelEditCompraBtn {
-    background-color: #f44336;
+    background-color: #567EF5;
+    color: white;
 }
 
 #cancelNewCompraBtn:hover, #cancelEditCompraBtn:hover {
-    background-color: #d32f2f;
+    background-color: #567EF5;
+    color: white;
 }
 
 /* Dropdown Styles */
 #clienteDropdown {
     position: absolute;
-    background-color: white;
+    background-color: rgb(51, 51, 51);
     border: 1px solid #ccc;
     width: 100%;
     max-height: 150px;

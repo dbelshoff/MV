@@ -86,7 +86,7 @@ namespace MVConsultoria.Web.Controllers
 
 
         // POST: api/Users
-        [HttpPost]
+        /*[HttpPost]
         public async Task<ActionResult<User>> PostUser(User user, [FromHeader] int adminId)
         {
             // Verifica se o adminId corresponde a um administrador
@@ -111,13 +111,70 @@ namespace MVConsultoria.Web.Controllers
             await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetUser", new { id = user.Id }, user);
+        }*/
+
+        [HttpPost]
+        [Authorize]
+        public async Task<ActionResult<User>> PostUser(User user)
+        {
+            try
+            {
+                /*// Obtém o tipo de usuário do token JWT
+                var userType = User.Claims.FirstOrDefault(c => c.Type == "role")?.Value;
+
+                // Verifica se o usuário logado é um administrador
+                if (userType != "Administrador")
+                {
+                    return Unauthorized(new { message = "Apenas administradores podem cadastrar novos usuários." });
+                }*/
+
+                // Verifica se o CPF do novo usuário já existe
+                var usuarioExistente = await _context.Users.FirstOrDefaultAsync(u => u.CPF == user.CPF);
+                if (usuarioExistente != null)
+                {
+                    return BadRequest(new { message = "Usuário com este CPF já está cadastrado." });
+                }
+
+
+
+                // Hash da senha antes de salvar no banco de dados
+                user.Senha = BCrypt.Net.BCrypt.HashPassword(user.Senha);
+
+                // Adiciona o novo usuário ao banco de dados
+                _context.Users.Add(user);
+                await _context.SaveChangesAsync();
+
+                return Ok(user); // Retorna 200 OK com o usuário criado
+
+
+                //return CreatedAtAction("GetUser", new { id = user.Id }, user);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { message = "Erro interno no servidor.", details = ex.Message });
+            }
+        }
+
+
+        // GET: api/Users/5
+        [HttpGet("{id}")]
+        public async Task<ActionResult<User>> GetUser(int id)
+        {
+            var user = await _context.Users.FindAsync(id);
+
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            return user;
         }
 
 
 
 
 
-        // POST: api/Users/login
+        /*// POST: api/Users/login
         [AllowAnonymous]
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginDto loginDto)
@@ -130,18 +187,13 @@ namespace MVConsultoria.Web.Controllers
 
             // Sucesso no login (aqui você pode gerar um token JWT)
             return Ok(new { message = "Login bem-sucedido!" });
-        }
+        }*/
 
         // PUT: api/Users/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutUser(int id, User user, [FromHeader] int adminId)
+        public async Task<IActionResult> PutUser(int id, User user)
         {
-            // Verifica se o adminId corresponde a um administrador
-            var administrador = await _context.Administradores.FindAsync(adminId);
-            if (administrador == null)
-            {
-                return Unauthorized("Apenas administradores podem alterar usuários.");
-            }
+
 
             if (id != user.Id)
             {
@@ -199,13 +251,9 @@ namespace MVConsultoria.Web.Controllers
 
         // PUT: api/Users/5/bloquear
         [HttpPut("{id}/bloquear")]
-        public async Task<IActionResult> BloquearUsuario(int id, [FromHeader] int adminId)
+        public async Task<IActionResult> BloquearUsuario(int id)
         {
-            var administrador = await _context.Administradores.FindAsync(adminId);
-            if (administrador == null)
-            {
-                return Unauthorized("Apenas administradores podem bloquear usuários.");
-            }
+
 
             var user = await _context.Users.FindAsync(id);
             if (user == null)
@@ -223,13 +271,8 @@ namespace MVConsultoria.Web.Controllers
 
         // PUT: api/Users/5/desbloquear
         [HttpPut("{id}/desbloquear")]
-        public async Task<IActionResult> DesbloquearUsuario(int id, [FromHeader] int adminId)
+        public async Task<IActionResult> DesbloquearUsuario(int id)
         {
-            var administrador = await _context.Administradores.FindAsync(adminId);
-            if (administrador == null)
-            {
-                return Unauthorized("Apenas administradores podem desbloquear usuários.");
-            }
 
             var user = await _context.Users.FindAsync(id);
             if (user == null)

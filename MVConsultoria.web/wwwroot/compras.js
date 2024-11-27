@@ -398,7 +398,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-// Fechar o modal ao clicar no "X" ou no botão "Cancelar"
+/*// Fechar o modal ao clicar no "X" ou no botão "Cancelar"
 document.addEventListener('DOMContentLoaded', function () {
     const closeCreateCompraButton = document.querySelector('.close-create-compra');
     const cancelarCadastroCompraButton = document.getElementById('cancelNewCompraBtn');
@@ -455,7 +455,81 @@ function logout() {
     localStorage.removeItem('token');
     console.log('Token após remoção:', localStorage.getItem('token'));
     window.location.href = "index.html";
+}*/
+document.addEventListener('DOMContentLoaded', function () {
+    const closeCreateCompraButton = document.querySelector('.close-create-compra');
+    const cancelarCadastroCompraButton = document.getElementById('cancelNewCompraBtn');
+    const cancelarEdicaoCompraButton = document.getElementById('cancelEditCompraBtn');
+    const closeEditCompraButton = document.querySelector('.close-edit-compra');
+    const alterarCompraButton = document.getElementById('alterarCompra');
+    const novoCompraButton = document.getElementById('novaCompra');
+    const logoutLink = document.getElementById('logoutLink');
+    const userType = localStorage.getItem('userType'); // Obtém o tipo de usuário do localStorage
+
+    // Fechar o modal de cadastro ao clicar no "X" ou no botão "Cancelar"
+    if (closeCreateCompraButton) {
+        closeCreateCompraButton.addEventListener('click', fecharModalCadastroCompra);
+    }
+
+    if (cancelarCadastroCompraButton) {
+        cancelarCadastroCompraButton.addEventListener('click', fecharModalCadastroCompra);
+    }
+
+    // Fechar o modal de edição ao clicar no "X"
+    if (closeEditCompraButton) {
+        closeEditCompraButton.addEventListener('click', fecharModalEditCompra);
+    }
+
+    if (cancelarEdicaoCompraButton) {
+        cancelarEdicaoCompraButton.addEventListener('click', fecharModalEditCompra);
+    }
+
+    // Mostrar o modal de edição ao clicar em "Alterar" no menu hambúrguer
+    if (alterarCompraButton) {
+        alterarCompraButton.addEventListener('click', mostrarModalEditCompra);
+    }
+
+    if (novoCompraButton) {
+        novoCompraButton.addEventListener('click', mostrarModalCadastroCompra);
+    }
+
+    carregarClientes(); // Carrega a lista de clientes no modal de cadastro de compra
+
+    // Adiciona lógica para logout
+    if (logoutLink) {
+        logoutLink.addEventListener('click', function (event) {
+            event.preventDefault();
+            logout();
+        });
+    }
+
+    // Lógica de restrição para usuários do tipo "Usuario"
+    if (userType === 'Usuario') {
+        const clientesLink = document.querySelector('a[href="clientes.html"]');
+        const usuariosLink = document.querySelector('a[href="usuarios.html"]');
+
+        if (clientesLink) {
+            clientesLink.style.pointerEvents = 'none'; // Impede o clique
+            clientesLink.style.opacity = '0.5'; // Reduz a opacidade para mostrar que está desativado
+        }
+
+        if (usuariosLink) {
+            usuariosLink.style.pointerEvents = 'none'; // Impede o clique
+            usuariosLink.style.opacity = '0.5'; // Reduz a opacidade para mostrar que está desativado
+        }
+
+
+        //alert("Você está logado como 'Usuário'. Algumas funcionalidades estão desativadas.");
+    }
+});
+
+function logout() {
+    console.log('Tentando fazer logout...');
+    localStorage.removeItem('token');
+    console.log('Token após remoção:', localStorage.getItem('token'));
+    window.location.href = "index.html";
 }
+
 
 
 

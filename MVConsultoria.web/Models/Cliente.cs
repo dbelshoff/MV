@@ -21,6 +21,8 @@ namespace MVConsultoria.Web.Models
 
         public double LimiteDisponivel { get; set; }
 
+        //public string Tipo { get; set; }
+
         // Novo campo para indicar se o cliente está bloqueado
         public bool Bloqueado { get; set; } = false;
 

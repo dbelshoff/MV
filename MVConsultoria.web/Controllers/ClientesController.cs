@@ -39,6 +39,7 @@ namespace MVConsultoria.Web.Controllers
                         LimiteDeCredito = c.LimiteDeCredito,
                         LimiteDisponivel = c.LimiteDisponivel,
                         Bloqueado = c.Bloqueado
+
                     })
                     .ToListAsync();
 
@@ -111,6 +112,7 @@ namespace MVConsultoria.Web.Controllers
 
             // Define o limite disponível igual ao limite de crédito
             cliente.LimiteDisponivel = cliente.LimiteDeCredito;
+            cliente.Discriminator = "Cliente";
 
 
             // Adiciona o cliente ao banco de dados

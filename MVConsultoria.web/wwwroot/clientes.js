@@ -267,6 +267,7 @@ document.getElementById('saveNewClientBtn').addEventListener('click', async func
     const telefone = document.getElementById('createTelefone').value;
     const diaDePagamento = document.getElementById('createDiaDePagamento').value;
     const limiteDeCredito = parseFloat(document.getElementById('createLimiteDeCredito').value) || 0;
+    
 
     const token = localStorage.getItem('token');
 
