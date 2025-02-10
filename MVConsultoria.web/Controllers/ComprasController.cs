@@ -60,7 +60,7 @@ namespace MVConsultoria.Web.Controllers
             if (cliente.Bloqueado)
             {
                 return BadRequest(new { message = "Cliente está bloqueado e não pode realizar compras." });
-                //return BadRequest("Cliente está bloqueado e não pode realizar compras.");
+
             }
 
             // Verifica se o cliente tem parcelas em atraso
