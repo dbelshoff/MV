@@ -1,49 +1,220 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MV Consultoria</title>
     <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
     <link rel="stylesheet" href="index.css" />
-    <title>Login</title>
   </head>
-
   <body>
-    <div class="container" id="container">
-      <div class="form-container sign-in">
-        <div class="login-area">
-          <h1>Entrar</h1>
+    <!-- HEADER -->
+    <header class="header" id="header">
+      <nav class="navbar">
+        <div class="logo-container">
+          <img src="imgs/logo-mv-sem-fundo.svg" alt="Logo" class="logo" />
+        </div>
+        <ul id="nav-links">
+          <li><a href="#home">HOME</a></li>
+          <li><a href="#sobre">SOBRE</a></li>
+          <li><a href="#planos">PLANOS</a></li>
+          <li><a href="#contato">CONTATO</a></li>
+          <li><a href="login.html" class="button">LOGIN</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+      </nav>
+    </header>
 
-          <input type="text" id="usuario" placeholder="CPF" required />
-          <input type="password" id="senha" placeholder="Senha" required />
+    <!-- HOME -->
+    <section id="home" class="home">
+      <div class="divHome">
+        <h1>MV CONSULTORIA</h1>
+        <h1>
+          Consultoria empresarial especializada em cobrança e recuperação de
+          crédito.
+        </h1>
+        <p>
+          Ajudamos micro e pequenas empresas a recuperarem crédito com
+          eficiência e segurança.
+        </p>
 
-          <button class="button-login" onclick="login()">Entrar</button>
-
-          <div class="whatsapp-container">
-            <p>Problemas com o login?</p>
-
-            <a href="https://wa.me/5527999665881" target="_blank">
-              <button class="button-whats">
-                <i class="fab fa-whatsapp"></i>
-                Entre em contato pelo WhatsApp
-              </button>
-            </a>
+        <section class="grafico">
+          <h2>📌 Recuperamos o que é seu: 76% de Sucesso!</h2>
+          <div class="progress-container">
+            <div class="progress-bar" style="width: 76%">76%</div>
           </div>
+        </section>
+      </div>
+      <div class="divHome">
+        <img src="imgs/consultoria.svg" alt="Consultoria" class="img" />
+      </div>
+    </section>
+
+    <br />
+    <br />
+
+    <!-- SOBRE -->
+    <section id="sobre" class="about">
+      <h2>Sobre Nós</h2>
+      <p id="textoAbout">
+        Oferecemos soluções completas para cobrança, recuperação de crédito,
+        consultas de CPF e CNPJ e gestão de carteira. Nosso compromisso é ajudar
+        micro e pequenas empresas a superarem desafios financeiros com
+        estratégias personalizadas, aumentando a taxa de recuperação e
+        garantindo mais segurança na gestão de crédito.
+      </p>
+    </section>
+
+    <section class="servicos">
+      <div class="servico">
+        <img src="imgs/icone-gestao.png" alt="Gestão de Carteira" />
+        <h3>Gestão de Carteira</h3>
+      </div>
+      <div class="servico">
+        <img src="imgs/icone-cpf.png" alt="Consulta de CPF/CNPJ" />
+        <h3>Consulta de CPF/CNPJ</h3>
+      </div>
+      <div class="servico">
+        <img src="imgs/icone-cobranca.png" alt="Cobrança" />
+        <h3>Cobrança</h3>
+      </div>
+    </section>
+
+    <section id="planos" class="planos">
+      <h2>Conheça nossos planos</h2>
+      <br />
+      <br />
+      <div class="planos-container">
+        <div class="plano">
+          <h3>Básico</h3>
+          <p class="preco">R$ 99,90/mês</p>
+          <p class="carteira">Carteira: R$ 10.000</p>
+          <ul class="beneficios">
+            <li class="yes">✔ Cobrança: 15%</li>
+            <li class="no">X Gestão de Carteira: -</li>
+            <li class="no">X Consultas CPF/CNPJ: -</li>
+          </ul>
+          <!-- Apenas o botão está dentro do link -->
+          <a
+            href="https://wa.me/5527999533049?text=Gostaria%20de%20mais%20informações%20sobre%20o%20plano%20Básico"
+            target="_blank"
+          >
+            <button class="button">Escolher</button>
+          </a>
+        </div>
+
+        <div class="plano">
+          <h3>Intermediário</h3>
+          <p class="preco">R$ 149,90/mês</p>
+          <p class="carteira">Carteira: R$ 30.000</p>
+          <ul class="beneficios">
+            <li class="yes">✔ Cobrança: 15%</li>
+            <li class="yes">✔ Gestão de Carteira: 6%</li>
+            <li class="no">X Consultas CPF/CNPJ: -</li>
+          </ul>
+          <!-- Apenas o botão está dentro do link -->
+          <a
+            href="https://wa.me/5527999533049?text=Gostaria%20de%20mais%20informações%20sobre%20o%20plano%20Intermediário"
+            target="_blank"
+          >
+            <button class="button">Escolher</button>
+          </a>
+        </div>
+
+        <div class="plano">
+          <h3>Avançado</h3>
+          <p class="preco">R$ 189,90/mês</p>
+          <p class="carteira">Carteira: R$ 50.000</p>
+          <ul class="beneficios">
+            <li class="yes">✔ Cobrança: 15%</li>
+            <li class="yes">✔ Gestão de Carteira: 4%</li>
+            <li class="yes">✔ Consultas CPF/CNPJ: Tabela</li>
+          </ul>
+          <!-- Apenas o botão está dentro do link -->
+          <a
+            href="https://wa.me/5527999533049?text=Gostaria%20de%20mais%20informações%20sobre%20o%20plano%20Avançado"
+            target="_blank"
+          >
+            <button class="button">Escolher</button>
+          </a>
+        </div>
+
+        <div class="plano">
+          <h3>Premium</h3>
+          <p class="preco">R$ 249,90/mês</p>
+          <p class="carteira">Carteira: + R$ 100.000</p>
+          <ul class="beneficios">
+            <li class="yes">✔ Cobrança: 12%</li>
+            <li class="yes">✔ Gestão de Carteira: 2%</li>
+            <li class="yes">✔ Consultas CPF/CNPJ: Tabela</li>
+          </ul>
+          <!-- Apenas o botão está dentro do link -->
+          <a
+            href="https://wa.me/5527999533049?text=Gostaria%20de%20mais%20informações%20sobre%20o%20plano%20Premium"
+            target="_blank"
+          >
+            <button class="button">Escolher</button>
+          </a>
         </div>
       </div>
-      <div class="toggle-container">
-        <div class="toggle">
-          <div class="toggle-panel toggle-right">
-            <img class="logo" src="imgs/MV CONSULT IMAGE.jpg" />
-          </div>
-        </div>
-      </div>
-    </div>
+    </section>
 
-    <!--========== Chamando o arquivo JS ==========-->
+    <br />
+    <br />
+
+    <!-- CONTATO -->
+    <section id="contato" class="contact">
+      <div class="formulario">
+        <h2>Entre em Contato</h2>
+        <form
+          id="contatoForm"
+          action="https://wa.me/5527999533049"
+          method="GET"
+          target="_blank"
+        >
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" name="nome" required />
+
+          <label for="empresa">Empresa:</label>
+          <input type="text" id="empresa" name="empresa" required />
+
+          <label for="telefone">Telefone:</label>
+          <input type="tel" id="telefone" name="telefone" required />
+
+          <label for="mensagem">Mensagem:</label>
+          <textarea id="mensagem" name="mensagem" required>
+Gostaria de mais informações sobre os serviços oferecidos.</textarea
+          >
+
+          <button type="submit" class="button">Enviar</button>
+        </form>
+      </div>
+
+      <!-- endereço -->
+
+      <div class="endereco">
+        <img src="imgs/logo-mv-sem-fundo-verde.svg" alt="Logo da Empresa" />
+
+        <p>
+          <strong>Endereço:</strong> Rua Antônio Gil Veloso, Praia da Costa,
+          Vila Velha/ES
+        </p>
+        <p><strong>Telefone:</strong> (27) 99953-3049</p>
+      </div>
+    </section>
+
+    <footer>
+      <h4>&copy; 2025 MV Consultoria - Todos os direitos reservados.</h4>
+      <h4>Produced by Diogo Belshoff</h4>
+    </footer>
+
     <script src="index.js"></script>
   </body>
 </html>

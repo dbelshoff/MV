@@ -1,166 +1,653 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
-
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Ubuntu', sans-serif;
 }
-  
-body{
-    background-color: #c9d6ff;
-    background: linear-gradient(to right, #e2e2e2, #000000);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    height: 100vh;
+
+html {
+  scroll-padding-top: 90px; /* Ajuste esse valor conforme a altura do cabeçalho */
 }
 
-.container{
-    background-color: #fff;
-    border-radius: 30px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
-    position: relative;
-    overflow: hidden;
-    width: 768px;
-    max-width: 100%;
-    min-height: 480px;
-}
 
-.container p{
-    font-size: 14px;
-    line-height: 20px;
-    letter-spacing: 0.3px;
-    margin: 20px 0;
-}
 
-.container span{
-    font-size: 12px;
-}
-.botao_acessar{
-    background-color: #D9B779;
-}
-.container a{
-    color: #333;
-    font-size: 13px;
-    text-decoration: none;
-    margin: 15px 0 10px;
-}
 
-.container button{
+body {
+    background-image: url('imgs/fundo.jpg'); /* Substitua pelo caminho correto da sua imagem */
+    background-size: cover; /* Faz a imagem cobrir toda a tela */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita repetições da imagem */
+    background-attachment: fixed; /* Mantém a imagem fixa ao rolar a página */
+    color: #000000;
+    line-height: 1.6;
+    }
     
-    color: #2c2c2c;
-    font-size: 12px;
-    padding: 10px 45px;
-    border: 1px solid transparent;
-    border-radius: 8px;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    margin-top: 10px;
-    cursor: pointer;
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+ 
+
+    
+    
 }
 
 
 
-.login-area{
-    background-color: #fff;
+.logo-container {
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0 40px;
-    height: 100%;
 }
-
-.whatsapp-container{
-    text-align: center;
-    width: 250px;
-}
-
-.button-login{
-    background-color: #567EF5;
-}
-
-
-.button-whats{
-    background-color: #19cc5b;
-}
-
-.container input{
-    background-color: #eee;
-    border: none;
-    margin: 8px 0;
-    padding: 10px 15px;
-    font-size: 13px;
-    border-radius: 8px;
-    width: 100%;
-    outline: none;
-}
-
-.form-container{
-    position: absolute;
-    top: 0;
-    height: 100%;
-    transition: all 0.6s ease-in-out;
-}
-.toggle-container{
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 50%;
-    height: 100%;
-    overflow: hidden;
-    transition: all 0.6s ease-in-out;
-    border-radius: 150px 0 0 100px;
-    z-index: 1000;
-}
-
-
-
-.toggle{
-    background-color: #2B2B2B;
-    height: 100%;
-    background: linear-gradient(to right,#2B2B2B, #2B2B2B);
-    color: #fff;
-    position: relative;
-    left: -100%;
-    height: 100%;
-    width: 200%;
-   
-}
-
-
-
-.toggle-panel{
-    position: absolute;
-    width: 50%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0 30px;
-    text-align: center;
-    top: 0;
-    transform: translateX(0);
-    transition: all 0.6s ease-in-out;
-}
-
-
-
-
-.toggle-right{
-    right: 0;
-    transform: translateX(0);
-}
-
 
 .logo {
-    width: 2500px; /* Define a largura da imagem */
-    height: 250px; /* Define a altura da imagem */
-    object-fit: contain; /* MantÃ©m a proporÃ§Ã£o da imagem */
-    margin-bottom: 20px; /* Adiciona um espaÃ§o abaixo da imagem */
+    width: 200px; /* Ajuste o tamanho da logomarca conforme necessário */
+    margin-right: 10px;
 }
 
+.logo-text {
+    font-size: 1.8rem;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+
+
+
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    
+}
+
+.navbar ul li {
+    margin: 0 20px;
+    
+}
+
+
+.navbar {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    top: 0;
+    z-index: 1000;
+    transition: top 0.3s, box-shadow 0.3s, padding 0.3s;
+    color: #292828;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 120px;
+    background-color: #ffffff;
+    border-radius: 10px; /* Define bordas arredondadas */
+}
+
+
+.navbar.fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;  /* Certifique-se de que a navbar se alinha corretamente */
+    padding: 20px; /* O mesmo padding de antes para evitar mudança */
+    height: 100px;
+    border-radius: 0px; /* Define bordas arredondadas */
+}
+
+.navbar ul li a {
+    color: rgb(0, 0, 0); /* Altere para a cor desejada */
+    text-decoration: none; /* Remove o sublinhado */
+    font-weight: bold; /* Deixa o texto mais destacado */
+    padding: 10px; /* Ajusta o espaçamento */
+    transition: color 0.3s ease-in-out; /* Suaviza a mudança de cor */
+}
+
+.navbar ul li a:hover {
+    color: #2E76B3; /* Muda a cor ao passar o mouse (exemplo: dourado) */
+    
+}
+
+
+/* Estilos para o Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 21px;
+  cursor: pointer;
+}
+
+.hamburger .bar {
+  width: 100%;
+  height: 4px;
+  background-color: #000;
+}
+
+  
+
+  
+  h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 36px;
+    color: #2E76B3;
+    font-weight: bold;
+    padding: 30px;
+  }
+  
+  p {
+    font-family: "Lato", sans-serif;
+    font-size: 22px;
+    color: #7F8C8D;
+    padding: 05px;
+  }
+  
+  .img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+
+  .grafico {
+    text-align: center;
+    padding: 40px;
+    background-color: #f4f6f7;
+    border-radius: 10px;
+  }
+
+  .grafico h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 24px;
+    color: #2C3E50;
+    margin-bottom: 20px;
+  }
+
+  .progress-container {
+    width: 80%;
+    background-color: #ecf0f1;
+    border-radius: 25px;
+    overflow: hidden;
+    margin: auto;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    
+  }
+
+  .progress-bar {
+    width: 0;
+    height: 40px;
+    background-color: #2E76B3;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 40px;
+    transition: width 2s ease-in-out;
+  }
+
+.divHome{
+/*background-color: #fff;*/
+flex: 1;
+padding: 50px;
+max-width: 100%;
+height: 600px;
+
+
+}
+
+
+.home {
+  background-color: #f4f6f7;;
+    width: 100%;
+    text-align: center;
+   align-items: center;
+    height: 600px;
+    display: flex;
+   padding: 30px;
+   justify-content: space-between;
+}
+
+
+
+  #sobre{
+    background-color: #ecf0f1;
+
+  }
+
+  #textoAbout {
+    width: 60%;
+    margin: 0 auto; /* Centraliza horizontalmente */
+    text-align: center; /* Centraliza o texto */
+    font-size: 18px; /* Ajuste opcional do tamanho da fonte */
+    line-height: 1.6; /* Melhor leitura */
+  }
+  
+  
+
+.about, .plans {
+    padding: 3rem 0;
+    text-align: center;
+    width: 100%;
+}
+
+.contact{
+padding: 20px;
+  background-color: #ecf0f1;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+ 
+}
+
+.contact h2{
+  text-align: center;
+}
+
+.formulario{
+padding: 20px;
+}
+
+form {
+  max-width: 300px;
+  margin: 0 auto;
+  text-align: left;
+
+}
+
+input, textarea {
+
+  width: 100%;
+  height: 30px;
+  border-radius: 6px;
+  margin: 1rem 0;
+  border: 1px solid #444;
+  background-color: #b8b8b8;
+  color: #000000;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.endereco{
+  
+text-align: center;
+
+}
+
+.endereco p{
+  font-size: 14px;
+  color: #2C3E50;
+}
+
+.endereco img{
+  max-width: 300px;
+  height: auto;
+  
+}
+
+.servicos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+    text-align: center;
+  }
+  
+  .servico {
+    width: 200px; /* Largura mais estreita */
+    height: 300px; /* Altura maior */
+    background: #f4f6f7;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .servico:hover {
+    transform: translateY(-5px);
+  }
+  
+  .servico img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+  }
+  
+  .servico h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 18px;
+    color: #2E76B3;
+  }
+
+  .planos {
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .planos-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .yes{
+    color: #56b334 !important;
+
+  }
+
+  .no{
+    color:#db2e2e !important;
+  }
+  
+  .plano {
+    width: 250px;
+    height: 360px;
+    background: #f4f6f7;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+  
+  .plano:hover {
+    transform: translateY(-5px);
+  }
+  
+  .plano h3 {
+    font-size: 20px;
+    color: #2C3E50;
+    padding: 30px;
+  }
+  
+  .preco {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2E76B3;
+    
+  }
+  
+  .carteira {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2E76B3;
+   
+  }
+  
+  .beneficios {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+  }
+  
+  .beneficios li {
+    font-size: 14px;
+    color: #2C3E50;
+    text-align: left;
+    padding: 5px;
+  }
+  
+  
+  
+.button {
+    background-color: #4ace2f;
+    padding: 10px 50px;
+    color: #fff !important;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.1s;
+    
+}
+
+
+
+.button:hover {
+    background-color: #879db1;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+  color: #666;
+  background-color: #ecf0f1;
+}
+
+
+
+
+/* Animações de transição de seção */
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s forwards;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Efeito hover nos botões */
+.button:hover {
+    background-color: #1e5689;
+    transform: scale(1.05);
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    .plans-table {
+        width: 100%;
+    }
+    .button {
+        width: 100%;
+    }
+}
+
+.img{
+    width: 700px;
+
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+  .plans-table {
+      width: 100%;
+  }
+
+  .button {
+      font-size: 12px;
+      padding: 8px;
+  }
+
+  .logo-text {
+      font-size: 1.5rem;
+  }
+
+  .navbar ul {
+      flex-direction: column;
+   
+  }
+
+  
+
+  .logo {
+      width: 150px;
+  }
+
+  .home{
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    text-align: center;
+  
+  }
+
+.home h1, p {
+  padding: 0px;
+  font-size: 20px;
+}
+
+
+.divHome{
+  /*background-color: #fff;*/
+ 
+  padding: 5px;
+
+  
+  
+  }
+
+.grafico h2{
+
+    align-items: center;
+    text-align: center;
+  font-size: 20px;
+}
+
+
+
+  .servicos {
+      flex-direction: column;
+    
+      align-items: center;
+  }
+
+  .planos-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .contact{
+    flex-direction: column;
+  }
+
+  /* Estilos do menu */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  left: -100%; /* Menu começa escondido à esquerda */
+  width: 30%; /* Largura do menu */
+  height: 50%; /* Altura total */
+  background-color: #ffffff; /* Cor do menu */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: transform 0.3s ease; /* Transição suave */
+  z-index: 999;
+  
+}
+
+/* Quando o menu tiver a classe 'active', ele será movido para a posição original */
+ul.active {
+  transform: translateX(200%); /* Menu se move para a posição visível */
+}
+
+
+
+.hamburger div {
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+}
+
+/* Estilos do item do menu */
+ul li {
+  
+  
+  border-bottom: 1px solid #444;
+
+}
+
+ul li:hover {
+  background-color: #555; /* Cor de hover */
+ 
+}
+
+/* Estilo para esconder o menu ao clicar fora (opcional, mas uma boa prática) */
+body.menu-open {
+  overflow: hidden; /* Impede rolagem de fundo */
+
+}
+
+
+  #nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 70%;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 0; /* Retirei o padding geral */
+    z-index: 999;
+    margin: 0; /* Retirei qualquer margem extra */
+  }
+
+  #nav-links.active {
+    display: flex;
+  }
+
+  #nav-links li {
+    width: 100%;
+    padding: 8px 0; /* Ajuste o padding para controlar o espaçamento */
+    background-color: white;
+    margin: 0; /* Elimina qualquer margem extra entre os itens */
+  }
+
+  #nav-links li:hover {
+    background-color: #f1f1f1;
+  }
+
+  #nav-links a {
+    display: block;
+    width: 100%;
+    padding: 10px 0; /* Controle do espaçamento interno dos links */
+    font-size: 18px;
+    color: #333;
+    text-decoration: none;
+    margin: 0; /* Certifique-se de que não haja margens extras nos links */
+  }
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+
+  .hamburger .bar {
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    transition: all 0.3s ease-in-out;
+  }
+}
