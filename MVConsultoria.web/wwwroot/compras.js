@@ -183,7 +183,6 @@ async function carregarClientes() {
         if (response.ok) {
             clientes = await response.json();
             clientesListaCompleta = clientes; // Armazena a lista completa de clientes
-            //exibirClientes(clientes); // Função para exibir clientes na tabela
         } else {
             const errorData = await response.json();
             alert(errorData.message || 'Erro ao carregar clientes.');
@@ -226,7 +225,7 @@ function filtrarClientes() {
     // Mostra o dropdown se houver resultados
     clienteDropdown.style.display = clientesFiltrados.length ? 'block' : 'none';
 
-    //console.log(clientesFiltrados); // Verifica os clientes filtrados
+
 }
 
 // Função para selecionar um cliente da lista
@@ -396,66 +395,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-
-
-/*// Fechar o modal ao clicar no "X" ou no botão "Cancelar"
-document.addEventListener('DOMContentLoaded', function () {
-    const closeCreateCompraButton = document.querySelector('.close-create-compra');
-    const cancelarCadastroCompraButton = document.getElementById('cancelNewCompraBtn');
-    const cancelarEdicaoCompraButton = document.getElementById('cancelEditCompraBtn');
-    const closeEditCompraButton = document.querySelector('.close-edit-compra');
-    const alterarCompraButton = document.getElementById('alterarCompra');
-    const novoCompraButton = document.getElementById('novaCompra');
-    const logoutLink = document.getElementById('logoutLink');
-
-    // Fechar o modal de cadastro ao clicar no "X" ou no botão "Cancelar"
-    if (closeCreateCompraButton) {
-        closeCreateCompraButton.addEventListener('click', fecharModalCadastroCompra);
-    }
-
-    if (cancelarCadastroCompraButton) {
-        cancelarCadastroCompraButton.addEventListener('click', fecharModalCadastroCompra);
-    }
-
-    // Fechar o modal de edição ao clicar no "X"
-    if (closeEditCompraButton) {
-        closeEditCompraButton.addEventListener('click', fecharModalEditCompra);
-    }
-
-    if (cancelarEdicaoCompraButton) {
-        cancelarEdicaoCompraButton.addEventListener('click', fecharModalEditCompra);
-    }
-
-    // Mostrar o modal de edição ao clicar em "Alterar" no menu hambúrguer
-    if (alterarCompraButton) {
-        alterarCompraButton.addEventListener('click', mostrarModalEditCompra);
-    }
-
-    if (novoCompraButton) {
-        novoCompraButton.addEventListener('click', mostrarModalCadastroCompra);
-    }
-
-    carregarClientes(); // Carrega a lista de clientes no modal de cadastro de compra
-
-
-    if (logoutLink) {
-        logoutLink.addEventListener('click', function (event) {
-            event.preventDefault();
-            logout();
-        });
-    }
-});
-
-
-
-
-
-function logout() {
-    console.log('Tentando fazer logout...');
-    localStorage.removeItem('token');
-    console.log('Token após remoção:', localStorage.getItem('token'));
-    window.location.href = "index.html";
-}*/
 document.addEventListener('DOMContentLoaded', function () {
     const closeCreateCompraButton = document.querySelector('.close-create-compra');
     const cancelarCadastroCompraButton = document.getElementById('cancelNewCompraBtn');
@@ -519,7 +458,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
 
-        //alert("Você está logado como 'Usuário'. Algumas funcionalidades estão desativadas.");
+       
     }
 });
 

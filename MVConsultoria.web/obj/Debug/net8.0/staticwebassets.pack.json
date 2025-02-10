@@ -93,10 +93,6 @@
       "PackagePath": "staticwebassets\\login.js"
     },
     {
-      "Id": "C:\\Users\\Belshoff\\projects\\mv\\mvconsultoria.web\\wwwroot\\menu.html",
-      "PackagePath": "staticwebassets\\menu.html"
-    },
-    {
       "Id": "C:\\Users\\Belshoff\\projects\\mv\\mvconsultoria.web\\wwwroot\\parcelas.html",
       "PackagePath": "staticwebassets\\parcelas.html"
     },

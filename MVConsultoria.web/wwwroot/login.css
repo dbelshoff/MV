@@ -158,8 +158,8 @@ body{
 
 
 .logo {
-    max-width: 250px; /* Define um tamanho adequado */
-    height: auto; /* Mantém a proporção */
+    max-width: 250px;
+    height: auto; 
     object-fit: contain;
 }
 
@@ -179,22 +179,22 @@ body{
     
     
     .whatsapp-container {
-        width: 200px; /* Reduz a largura do container do WhatsApp */
+        width: 200px; 
     }
 
     .logo {
-        width: 100%; /* Faz a imagem da logo ser responsiva */
-        height: auto; /* Ajusta a altura automaticamente */
+        width: 100%; 
+        height: auto;
     }
     .toggle-container {
-        display: none; /* Esconde a logo em telas muito pequenas */
+        display: none; 
     }
 }
 
 /* Ajuste para telas médias (tablets) */
 @media (max-width: 600px) {
     .toggle-container {
-        display: none; /* Esconde a logo em telas muito pequenas */
+        display: none; 
     }
 }
 

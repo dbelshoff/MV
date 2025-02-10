@@ -7,17 +7,12 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- Botão do menu hamburger para abrir a sidebar -->
     <div class="hamburger" id="hamburgerMenu">
       <span>&#9776;</span>
-      <!-- ícone de três linhas -->
     </div>
 
     <div class="container">
-      <!-- Sidebar fixa ou oculta -->
-
       <div class="sidebar">
-        <!-- Adicionada a classe 'hidden' para ocultar inicialmente -->
         <h2>Menu</h2>
 
         <ul id="menu">
@@ -38,14 +33,12 @@
 
       <div class="content">
         <header class="header-container">
-          <!-- Campo de busca -->
           <div class="search-container">
             <input
               type="text"
               id="searchField"
               placeholder="Buscar cliente por nome, CPF ou e-mail"
             />
-            <!-- Botão para limpar os filtros -->
             <button id="limparFiltrosBtn">Limpar Filtros</button>
           </div>
         </header>
@@ -65,16 +58,12 @@
                   <th>Ações</th>
                 </tr>
               </thead>
-              <tbody>
-                <!-- Os clientes serão inseridos aqui -->
-              </tbody>
+              <tbody></tbody>
             </table>
           </div>
         </main>
       </div>
-      <!-- Fechamento da div.content -->
     </div>
-    <!-- Fechamento da div.container -->
 
     <!-- Modal para cadastrar novo cliente -->
     <div id="createClientModal" class="modal">

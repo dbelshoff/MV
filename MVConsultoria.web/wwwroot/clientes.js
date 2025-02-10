@@ -120,43 +120,6 @@ async function toggleBloqueioCliente(clienteId, bloqueado) {
     }
 }
 
-/*// Função para alterar o limite do cliente
-async function alterarLimite(clienteId) {
-    const token = localStorage.getItem('token');
-    let novoLimite = prompt("Insira o novo limite de crédito:");
-
-    // Valida o valor de novoLimite
-    if (novoLimite === null || novoLimite.trim() === '' || isNaN(novoLimite) || parseFloat(novoLimite) < 0) {
-        alert("Por favor, insira um valor numérico válido para o limite de crédito.");
-        return;
-    }
-
-    novoLimite = parseFloat(novoLimite);
-
-    const url = `/api/Clientes/alterarLimite/${clienteId}`;
-
-    try {
-        const response = await fetch(url, {
-            method: 'PUT',
-            headers: {
-                'Authorization': `Bearer ${token}`,
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ novoLimite }) // Enviando o valor corretamente no corpo da requisição
-        });
-
-        if (response.ok) {
-            alert('Limite de crédito alterado com sucesso!');
-            carregarClientes(); // Recarrega a lista de clientes
-        } else {
-            const errorData = await response.json();
-            alert(errorData.message || 'Erro ao alterar o limite do cliente.');
-        }
-    } catch (error) {
-        console.error('Erro ao alterar o limite do cliente:', error);
-        alert('Ocorreu um erro ao alterar o limite do cliente. Tente novamente mais tarde.');
-    }
-}*/
 
 // Função para mostrar o modal de cadastro de cliente
 function mostrarModalCadastro() {

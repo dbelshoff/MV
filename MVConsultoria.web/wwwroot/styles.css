@@ -95,7 +95,7 @@ body {
     overflow-y: auto; 
 }
 
-/* Estilo para a tabela com rolagem vertical */
+
 #compras-table, #clientes-table, #parcelas-table {
     width: 100%;
     border-collapse: collapse;
@@ -114,7 +114,7 @@ body {
 
 
 
-/* Header ajustado para acompanhar a sidebar */
+
 .header-container {
     display: flex;
     justify-content: space-between;
@@ -123,9 +123,9 @@ body {
     background-color: #f8f8f8;
     position: fixed;
     top: 0;
-    left: 190px; /* Alinhamento do header com sidebar expandida */
-    width: calc(100% - 150px); /* Largura do header com sidebar expandida */
-    transition: left 0.3s ease, width 0.3s ease; /* Transições para suavizar o movimento */
+    left: 190px; 
+    width: calc(100% - 150px);
+    transition: left 0.3s ease, width 0.3s ease; 
     z-index: 999;
 }
 
@@ -148,7 +148,7 @@ body {
     width: 150px;
 }
 
-/* Hamburger Menu Styles */
+
 .hamburger {
     position: relative;
 }
@@ -184,7 +184,7 @@ body {
     display: block;
 }
 
-/* Selected Row Styles */
+
 .selected-row {
     background-color: #12229a !important;
     color: #ffffff;
@@ -198,7 +198,7 @@ body {
 
 
 main {
-    margin-top: 80px; /* Espaço para o header fixo */
+    margin-top: 80px; 
     flex-grow: 1;
     height: calc(100vh - 80px);
 }
@@ -218,7 +218,7 @@ th, td {
 
 
 
-/* Modal Styles */
+
 .modal {
     display: none;
     position: fixed;
@@ -234,16 +234,16 @@ th, td {
 }
 
 .modal-content {
-    background: rgba(52, 52, 52, 0.9); /* Fundo semi-transparente para efeito elegante */
+    background: rgba(52, 52, 52, 0.9); 
     color: #f8f8f8;
     margin: 5% auto;
     padding: 20px;
     border-radius: 12px;
     width: 20%;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra suave para profundidade */
-    border: 1px solid rgba(255, 255, 255, 0.3); /* Borda translúcida */
-    backdrop-filter: blur(10px); /* Efeito de desfoque no fundo do modal */
-    -webkit-backdrop-filter: blur(10px); /* Compatibilidade com Safari */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); 
+    border: 1px solid rgba(255, 255, 255, 0.3); 
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px); 
 }
 
 .close, .close-create {
@@ -271,7 +271,7 @@ input[type="number"] {
     width: 100%;
     border-radius: 5px;
     background-color: #fff;
-    box-sizing: border-box; /* Garante que padding não altere a largura total */
+    box-sizing: border-box; 
     border-style: solid;
     outline: none;
 }
@@ -281,12 +281,11 @@ input[type="email"]:focus,
 input[type="password"]:focus,
 input[type="date"]:focus,
 input[type="number"]:focus {
-    border-color: rgba(128, 128, 128, 0.8); /* Borda mais evidente ao focar */
-    box-shadow: 0 0 5px rgba(128, 128, 128, 0.3); /* Leve sombra ao focar */
+    border-color: rgba(128, 128, 128, 0.8); 
+    box-shadow: 0 0 5px rgba(128, 128, 128, 0.3); 
 }
 
 
-/* Button Styles */
 button {
     padding: 10px 20px;
     font-size: 14px;
@@ -311,7 +310,6 @@ button.cancel:hover {
 
 
 
-/* Dropdown Styles */
 #clienteDropdown {
     position: absolute;
     background-color: white;
@@ -339,7 +337,6 @@ button.cancel:hover {
 
 
 
-/* Estilos do menu hamburger */
 .hamburger {
     display: block;
     position: fixed;
@@ -348,26 +345,26 @@ button.cancel:hover {
     font-size: 30px;
     color: white;
     cursor: pointer;
-    z-index: 1002; /* Para que fique acima da sidebar escondida */
+    z-index: 1002; 
 }
 
 
 
-/* Exibir o menu hamburger quando a sidebar estiver oculta */
+
 .sidebar.hidden + .hamburger {
     display: block;
 }
 
 .sidebar.hidden ~ .content .header-container {
     left: 45px;
-    width: calc(100% - 45px); /* Ajusta a largura do header para acomodar a sidebar */
+    width: calc(100% - 45px); 
 }
 
 .sidebar.hidden ~ .content {
-    margin-left: 45px; /* Mantém o conteúdo alinhado quando a sidebar está parcialmente oculta */
+    margin-left: 45px; 
 }
 
-/* Ajuste na sidebar para aparecer somente ao clicar */
+
 .sidebar.hidden {
     transform: translateX(-70%);
     transition: transform 0.3s ease;
@@ -384,7 +381,7 @@ button.cancel:hover {
 
 
 
-/* Estilo do toggle */
+
 .toggle-menu {
     margin-bottom: 15px;
     color: white;
@@ -392,37 +389,33 @@ button.cancel:hover {
     font-size: 14px;
 }
 
-/* Configuração de imagem */
+
 .image {
-    width: 40%; /* Define a largura para preencher o elemento pai */
-    height: auto; /* Mantém a proporção da imagem */
-    border-radius: 10px; /* Arredonda os cantos da imagem */
-    border: 2px solid #ccc; /* Adiciona uma borda de cor cinza claro */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra sutil */
-    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
-    transition: transform 0.3s ease; /* Transição para efeito de hover */
+    width: 40%; 
+    height: auto; 
+    border-radius: 10px; 
+    border: 2px solid #ccc; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+    object-fit: cover; 
+    transition: transform 0.3s ease; 
 }
 
-/* Efeito ao passar o mouse */
+
 .image-config:hover {
-    transform: scale(1.05); /* Aumenta a imagem levemente ao passar o mouse */
+    transform: scale(1.05);
 }
 
 #submenu {
     margin-left: 20px;
-    display: block; /* Ocultar o submenu por padrão */
+    display: block; 
   }
   
-  /*#menu li:hover > #submenu {
-    display: block; /* Exibir o submenu ao passar o mouse sobre CLIENTES */
- /* }*/
-  
- /* Centraliza o conteúdo da search-container */
+ 
 .search-container {
     display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-    gap: 10px; /* Espaçamento entre o campo de busca e o botão */
-    margin: 0 auto; /* Centraliza a div dentro do contêiner pai */
+    justify-content: center; 
+    align-items: center; 
+    gap: 10px;
+    margin: 0 auto; 
 }
 

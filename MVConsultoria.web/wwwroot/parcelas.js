@@ -147,7 +147,6 @@ document.getElementById('limparFiltrosBtn').addEventListener('click', limparFilt
 document.getElementById('alterarParcela').addEventListener('click', function() {
     // Verificar se há uma linha selecionada
 
-    //deve-se alterar aqui
     const selectedRow = document.querySelector('.selected-row');
     if (!selectedRow) {
         alert('Selecione uma parcela para alterar.');
@@ -202,13 +201,10 @@ document.getElementById('saveParcelaBtn').onclick = function(event) {
     const parcelaId = document.querySelector('.selected-row .select-parcela').dataset.id;
     const valor = parseFloat(document.getElementById('valorParcela').value);
     const dataVencimento = document.getElementById('dataVencimentoParcela').value;
-    const status = document.getElementById('statusParcela').value === 'true'; // Converte 'true'/'false' para booleano
+    const status = document.getElementById('statusParcela').value === 'true';
 
     alterarParcela(parcelaId, valor, dataVencimento, status);
 };
-
-// Chama a função ao carregar a página
-//window.onload = carregarParcelas;
 
 
 
@@ -233,7 +229,7 @@ async function alterarParcela(id, valor, dataVencimento) {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                //valor: valor,
+             
                 dataVencimento: dataFormatada  // Envia a data formatada corretamente
             })
         });
@@ -259,9 +255,7 @@ function mostrarMenuHamburguer() {
     menu.classList.toggle('show');
 }
 
-//começa aqui
 
-// este codigo esta funcionando perfeitamente
 // Função para exibir o modal com as parcelas selecionadas
 async function exibirModalBaixaParcelas() {
     const selecionadas = document.querySelectorAll('.select-parcela:checked');
@@ -371,34 +365,7 @@ document.getElementById('confirmarPagamentoBtn').addEventListener('click', funct
     processarBaixaParcelas();  // Processa o pagamento das parcelas selecionadas
 });
 
-/*document.addEventListener("DOMContentLoaded", function () {
-    const sidebar = document.querySelector(".sidebar");
-    const hamburgerMenu = document.getElementById("hamburgerMenu");
 
-    // Clique no menu hamburger para mostrar ou esconder sidebar
-    hamburgerMenu.addEventListener("click", function () {
-        sidebar.classList.toggle("hidden");
-    });
-
-    if (logoutLink) {
-        logoutLink.addEventListener('click', function (event) {
-            event.preventDefault();
-            logout();
-        });
-    }
-});
-
-
-
-
-
-function logout() {
-console.log('Tentando fazer logout...');
-localStorage.removeItem('token');
-console.log('Token após remoção:', localStorage.getItem('token'));
-window.location.href = "index.html";
-}
-*/
 document.addEventListener("DOMContentLoaded", function () {
     const sidebar = document.querySelector(".sidebar");
     const hamburgerMenu = document.getElementById("hamburgerMenu");
@@ -414,7 +381,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Lógica de restrição para usuários do tipo "Usuario"
     if (userType === 'Usuario') {
-        // Exemplo de links ou botões que devem ser desativados
         const clientesLink = document.querySelector('a[href="clientes.html"]');
         const usuariosLink = document.querySelector('a[href="usuarios.html"]');
 
@@ -428,7 +394,6 @@ document.addEventListener("DOMContentLoaded", function () {
             usuariosLink.style.opacity = '0.5'; // Reduz a opacidade para mostrar que está desativado
         }
 
-        //alert("Você está logado como 'Usuário'. Algumas funcionalidades estão desativadas.");
     }
 
     // Função de logout
