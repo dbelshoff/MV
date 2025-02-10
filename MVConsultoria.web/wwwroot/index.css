@@ -6,36 +6,25 @@
 }
 
 html {
-  scroll-padding-top: 90px; /* Ajuste esse valor conforme a altura do cabeçalho */
+  scroll-padding-top: 90px;
 }
 
-
-
-
 body {
-    background-image: url('imgs/fundo.jpg'); /* Substitua pelo caminho correto da sua imagem */
-    background-size: cover; /* Faz a imagem cobrir toda a tela */
-    background-position: center; /* Centraliza a imagem */
-    background-repeat: no-repeat; /* Evita repetições da imagem */
-    background-attachment: fixed; /* Mantém a imagem fixa ao rolar a página */
+    background-image: url('imgs/fundo.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
     color: #000000;
     line-height: 1.6;
-    }
-    
-
+}
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px;
- 
-
-    
-    
+    padding: 30px;   
 }
-
-
 
 .logo-container {
     display: flex;
@@ -43,7 +32,7 @@ header {
 }
 
 .logo {
-    width: 200px; /* Ajuste o tamanho da logomarca conforme necessário */
+    width: 200px;
     margin-right: 10px;
 }
 
@@ -53,10 +42,6 @@ header {
     font-weight: 700;
     text-decoration: none;
 }
-
-
-
-
 
 .navbar ul {
     list-style: none;
@@ -68,7 +53,6 @@ header {
     margin: 0 20px;
     
 }
-
 
 .navbar {
     position: relative;
@@ -84,35 +68,31 @@ header {
     align-items: center;
     height: 120px;
     background-color: #ffffff;
-    border-radius: 10px; /* Define bordas arredondadas */
+    border-radius: 10px;
 }
-
 
 .navbar.fixed {
     position: fixed;
     top: 0;
     width: 100%;
-    left: 0;  /* Certifique-se de que a navbar se alinha corretamente */
-    padding: 20px; /* O mesmo padding de antes para evitar mudança */
+    left: 0; 
+    padding: 20px;
     height: 100px;
-    border-radius: 0px; /* Define bordas arredondadas */
+    border-radius: 0px;
 }
 
 .navbar ul li a {
-    color: rgb(0, 0, 0); /* Altere para a cor desejada */
-    text-decoration: none; /* Remove o sublinhado */
-    font-weight: bold; /* Deixa o texto mais destacado */
-    padding: 10px; /* Ajusta o espaçamento */
-    transition: color 0.3s ease-in-out; /* Suaviza a mudança de cor */
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px; 
+    transition: color 0.3s ease-in-out;
 }
 
 .navbar ul li a:hover {
-    color: #2E76B3; /* Muda a cor ao passar o mouse (exemplo: dourado) */
-    
+    color: #2E76B3;
 }
 
-
-/* Estilos para o Hamburger */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -128,118 +108,103 @@ header {
   background-color: #000;
 }
 
+h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 36px;
+  color: #2E76B3;
+  font-weight: bold;
+  padding: 30px;
+ }
   
-
+p {
+  font-family: "Lato", sans-serif;
+  font-size: 22px;
+  color: #7F8C8D;
+  padding: 05px;
+}
   
-  h1 {
-    font-family: "Playfair Display", serif;
-    font-size: 36px;
-    color: #2E76B3;
-    font-weight: bold;
-    padding: 30px;
-  }
+.img {
+  max-width: 100%;
+  height: auto;
+}
   
-  p {
-    font-family: "Lato", sans-serif;
-    font-size: 22px;
-    color: #7F8C8D;
-    padding: 05px;
-  }
-  
-  .img {
-    max-width: 100%;
-    height: auto;
-  }
-  
+.grafico {
+  text-align: center;
+  padding: 40px;
+  background-color: #f4f6f7;
+  border-radius: 10px;
+}
 
-  .grafico {
-    text-align: center;
-    padding: 40px;
-    background-color: #f4f6f7;
-    border-radius: 10px;
-  }
+.grafico h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  color: #2C3E50;
+  margin-bottom: 20px;
+}
 
-  .grafico h2 {
-    font-family: "Playfair Display", serif;
-    font-size: 24px;
-    color: #2C3E50;
-    margin-bottom: 20px;
-  }
+.progress-container {
+  width: 80%;
+  background-color: #ecf0f1;
+  border-radius: 25px;
+  overflow: hidden;
+  margin: auto;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); 
+}
 
-  .progress-container {
-    width: 80%;
-    background-color: #ecf0f1;
-    border-radius: 25px;
-    overflow: hidden;
-    margin: auto;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-    
-  }
-
-  .progress-bar {
-    width: 0;
-    height: 40px;
-    background-color: #2E76B3;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    text-align: center;
-    line-height: 40px;
-    transition: width 2s ease-in-out;
-  }
+.progress-bar {
+  width: 0;
+  height: 40px;
+  background-color: #2E76B3;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 40px;
+  transition: width 2s ease-in-out;
+}
 
 .divHome{
-/*background-color: #fff;*/
 flex: 1;
 padding: 50px;
 max-width: 100%;
 height: 600px;
-
-
 }
-
 
 .home {
   background-color: #f4f6f7;;
-    width: 100%;
-    text-align: center;
-   align-items: center;
-    height: 600px;
-    display: flex;
-   padding: 30px;
-   justify-content: space-between;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  height: 600px;
+  display: flex;
+  padding: 30px;
+  justify-content: space-between;
 }
 
+#sobre{
+  background-color: #ecf0f1;
+}
 
+#textoAbout {
+  width: 60%;
+  margin: 0 auto;
+  text-align: center; 
+  font-size: 18px; 
+  line-height: 1.6; 
+}
 
-  #sobre{
-    background-color: #ecf0f1;
-
-  }
-
-  #textoAbout {
-    width: 60%;
-    margin: 0 auto; /* Centraliza horizontalmente */
-    text-align: center; /* Centraliza o texto */
-    font-size: 18px; /* Ajuste opcional do tamanho da fonte */
-    line-height: 1.6; /* Melhor leitura */
-  }
-  
-  
-
-.about, .plans {
-    padding: 3rem 0;
-    text-align: center;
-    width: 100%;
+.about {
+  padding: 3rem 0;
+  text-align: center;
+  width: 100%;
 }
 
 .contact{
-padding: 20px;
+  padding: 20px;
   background-color: #ecf0f1;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
- 
 }
 
 .contact h2{
@@ -247,18 +212,16 @@ padding: 20px;
 }
 
 .formulario{
-padding: 20px;
+  padding: 20px;
 }
 
 form {
   max-width: 300px;
   margin: 0 auto;
   text-align: left;
-
 }
 
 input, textarea {
-
   width: 100%;
   height: 30px;
   border-radius: 6px;
@@ -274,9 +237,7 @@ textarea {
 }
 
 .endereco{
-  
-text-align: center;
-
+  text-align: center;
 }
 
 .endereco p{
@@ -287,135 +248,125 @@ text-align: center;
 .endereco img{
   max-width: 300px;
   height: auto;
-  
 }
 
 .servicos {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 40px;
-    text-align: center;
-  }
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px;
+  text-align: center;
+}
   
-  .servico {
-    width: 200px; /* Largura mais estreita */
-    height: 300px; /* Altura maior */
-    background: #f4f6f7;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
+.servico {
+  width: 200px;
+  height: 300px;
+  background: #f4f6f7;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
   
-  .servico:hover {
-    transform: translateY(-5px);
-  }
+.servico:hover {
+  transform: translateY(-5px);
+}
   
-  .servico img {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 15px;
-  }
+.servico img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+}
   
-  .servico h3 {
-    font-family: "Playfair Display", serif;
-    font-size: 18px;
-    color: #2E76B3;
-  }
-
-  .planos {
-    text-align: center;
-    padding: 10px;
-  }
-  
-  .planos-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-
-  .yes{
-    color: #56b334 !important;
-
-  }
-
-  .no{
-    color:#db2e2e !important;
-  }
-  
-  .plano {
-    width: 250px;
-    height: 360px;
-    background: #f4f6f7;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-  }
-  
-  .plano:hover {
-    transform: translateY(-5px);
-  }
-  
-  .plano h3 {
-    font-size: 20px;
-    color: #2C3E50;
-    padding: 30px;
-  }
-  
-  .preco {
-    font-size: 18px;
-    font-weight: bold;
-    color: #2E76B3;
-    
-  }
-  
-  .carteira {
-    font-size: 18px;
-    font-weight: bold;
-    color: #2E76B3;
-   
-  }
-  
-  .beneficios {
-    list-style: none;
-    padding: 0;
-    text-align: center;
-  }
-  
-  .beneficios li {
-    font-size: 14px;
-    color: #2C3E50;
-    text-align: left;
-    padding: 5px;
-  }
-  
-  
-  
-.button {
-    background-color: #4ace2f;
-    padding: 10px 50px;
-    color: #fff !important;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.1s;
-    
+.servico h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 18px;
+  color: #2E76B3;
 }
 
+.planos {
+  text-align: center;
+  padding: 10px;
+}
+  
+.planos-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
 
+.plano {
+  width: 250px;
+  height: 360px;
+  background: #f4f6f7;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+  }
+  
+.plano:hover {
+  transform: translateY(-5px);
+}
+  
+.plano h3 {
+  font-size: 20px;
+  color: #2C3E50;
+  padding: 30px;
+}
+  
+.preco {
+  font-size: 18px;
+  font-weight: bold;
+  color: #2E76B3;
+}
+  
+.carteira {
+  font-size: 18px;
+  font-weight: bold;
+  color: #2E76B3;
+}
+  
+.beneficios {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+  
+.beneficios li {
+  font-size: 14px;
+  color: #2C3E50;
+  text-align: left;
+  padding: 5px;
+}
+  
+.button {
+  background-color: #4ace2f;
+  padding: 10px 50px;
+  color: #fff !important;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.1s;  
+}
 
 .button:hover {
-    background-color: #879db1;
+  background-color: #879db1;
+}
+
+.yes{
+  color: #56b334 !important;
+}
+
+.no{
+  color:#db2e2e !important;
 }
 
 footer {
@@ -427,19 +378,17 @@ footer {
 }
 
 
-
-
 /* Animações de transição de seção */
 section {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeIn 1s forwards;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1s forwards;
 }
 
 .fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeIn 1s forwards;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1s forwards;
 }
 
 @keyframes fadeIn {
@@ -452,9 +401,10 @@ section {
 
 /* Efeito hover nos botões */
 .button:hover {
-    background-color: #1e5689;
-    transform: scale(1.05);
+  background-color: #1e5689;
+  transform: scale(1.05);
 }
+
 
 /* Responsividade */
 @media screen and (max-width: 768px) {
@@ -467,108 +417,105 @@ section {
 }
 
 .img{
-    width: 700px;
-
+  width: 700px;
 }
 
-/* Responsividade */
+
 @media screen and (max-width: 768px) {
-  .plans-table {
-      width: 100%;
-  }
+.plans-table {
+  width: 100%;
+}
 
-  .button {
-      font-size: 12px;
-      padding: 8px;
-  }
+.button {
+  font-size: 12px;
+  padding: 8px;
+}
 
-  .logo-text {
-      font-size: 1.5rem;
-  }
+.logo-text {
+  font-size: 1.5rem;
+}
 
-  .navbar ul {
-      flex-direction: column;
-   
-  }
+.navbar ul {
+  flex-direction: column; 
+}
 
-  
+.logo {
+  width: 150px;
+}
 
-  .logo {
-      width: 150px;
-  }
-
-  .home{
-    flex-direction: column;
-    height: auto;
-    align-items: center;
-    text-align: center;
-  
-  }
+.home{
+  flex-direction: column;
+  height: auto;
+  align-items: center;
+  text-align: center; 
+}
 
 .home h1, p {
   padding: 0px;
   font-size: 20px;
 }
 
-
 .divHome{
-  /*background-color: #fff;*/
- 
   padding: 5px;
-
-  
-  
-  }
+}
 
 .grafico h2{
-
-    align-items: center;
-    text-align: center;
+  align-items: center;
+  text-align: center;
   font-size: 20px;
 }
 
+.servicos {
+  flex-direction: column;    
+  align-items: center;
+}
 
+.planos-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+}
 
-  .servicos {
-      flex-direction: column;
-    
-      align-items: center;
-  }
+.beneficios{
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+}
 
-  .planos-container {
-      flex-direction: column;
-      align-items: center;
-  }
+.plano{
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  height: auto;
+}
 
-  .contact{
-    flex-direction: column;
-  }
+.contact{
+  flex-direction: column;
+}
+
 
   /* Estilos do menu */
-ul {
+.header ul {
   list-style: none;
   padding: 0;
   margin: 0;
   position: fixed;
   top: 0;
-  left: -100%; /* Menu começa escondido à esquerda */
-  width: 30%; /* Largura do menu */
-  height: 50%; /* Altura total */
-  background-color: #ffffff; /* Cor do menu */
+  left: -100%;
+  width: 30%;
+  height: 50%; 
+  background-color: #ffffff; 
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  transition: transform 0.3s ease; /* Transição suave */
+  transition: transform 0.3s ease;
   z-index: 999;
-  
 }
 
-/* Quando o menu tiver a classe 'active', ele será movido para a posição original */
 ul.active {
-  transform: translateX(200%); /* Menu se move para a posição visível */
+  transform: translateX(200%);
 }
-
-
 
 .hamburger div {
   width: 30px;
@@ -576,78 +523,71 @@ ul.active {
   background-color: #fff;
 }
 
-/* Estilos do item do menu */
-ul li {
-  
-  
+.header ul li {
   border-bottom: 1px solid #444;
-
 }
 
 ul li:hover {
-  background-color: #555; /* Cor de hover */
- 
+  background-color: #555;
 }
 
-/* Estilo para esconder o menu ao clicar fora (opcional, mas uma boa prática) */
+
 body.menu-open {
-  overflow: hidden; /* Impede rolagem de fundo */
-
+  overflow: hidden;
 }
 
+#nav-links {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 70%;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 0;
+  z-index: 999;
+  margin: 0; 
+}
 
-  #nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 70%;
-    background-color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    padding: 0; /* Retirei o padding geral */
-    z-index: 999;
-    margin: 0; /* Retirei qualquer margem extra */
-  }
+ #nav-links.active {
+  display: flex;
+}
 
-  #nav-links.active {
-    display: flex;
-  }
+#nav-links li {
+  width: 100%;
+  padding: 8px 0;
+  background-color: white;
+  margin: 0;
+}
 
-  #nav-links li {
-    width: 100%;
-    padding: 8px 0; /* Ajuste o padding para controlar o espaçamento */
-    background-color: white;
-    margin: 0; /* Elimina qualquer margem extra entre os itens */
-  }
+#nav-links li:hover {
+  background-color: #f1f1f1;
+}
 
-  #nav-links li:hover {
-    background-color: #f1f1f1;
-  }
+#nav-links a {
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  font-size: 18px;
+  color: #333;
+  text-decoration: none;
+  margin: 0;
+}
 
-  #nav-links a {
-    display: block;
-    width: 100%;
-    padding: 10px 0; /* Controle do espaçamento interno dos links */
-    font-size: 18px;
-    color: #333;
-    text-decoration: none;
-    margin: 0; /* Certifique-se de que não haja margens extras nos links */
-  }
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 1000;
+}
 
-  .hamburger {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-    z-index: 1000;
-  }
-
-  .hamburger .bar {
-    width: 30px;
-    height: 3px;
-    background-color: #333;
-    transition: all 0.3s ease-in-out;
-  }
+.hamburger .bar {
+  width: 30px;
+  height: 3px;
+  background-color: #333;
+  transition: all 0.3s ease-in-out;
+}
 }
