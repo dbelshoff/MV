@@ -6,7 +6,7 @@ let usuariosListaCompleta = []; // Armazena a lista completa de usuários
 async function carregarUsuarios() {
     const token = localStorage.getItem('token'); // Obtém o token do localStorage
 
-    if (!token) {
+   if (!token) {
         alert("Você precisa estar logado para ver os usuários.");
         window.location.href = "admin.html";
         return;

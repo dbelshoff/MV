@@ -10,6 +10,8 @@ using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
+
+
 // Configuração da conexão com o banco de dados MySQL
 builder.Services.AddDbContext<MVConsultoriaContext>(options =>
     options.UseMySQL(builder.Configuration.GetConnectionString("DefaultConnection")));
